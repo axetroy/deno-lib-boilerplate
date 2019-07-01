@@ -1,0 +1,15 @@
+language: minimal
+
+os:
+  - linux
+  - osx
+  - windows
+
+env:
+  - DENO_VERSION=v0.10.0
+
+before_script:
+  - sh ./prepare.sh
+
+script:
+  - $HOME/.deno/bin/deno -A ./test.ts
